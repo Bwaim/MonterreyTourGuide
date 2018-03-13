@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~    Copyright 2018 Fabien Boismoreau
   ~
@@ -14,10 +15,19 @@
   ~    limitations under the License.
   -->
 
-<resources>
-    <string name="app_name">Monterrey Tour Guide</string>
-    <string name="restaurants">Restaurants</string>
-    <string name="cultures">Cultures</string>
-    <string name="entertainments">Entertainments</string>
-    <string name="cinemas">Cinemas</string>
-</resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/restaurants"
+            android:title="@string/restaurants" />
+        <item
+            android:id="@+id/cultures"
+            android:title="@string/cultures" />
+        <item
+            android:id="@+id/entertainments"
+            android:title="@string/entertainments" />
+        <item
+            android:id="@+id/cinemas"
+            android:title="@string/cinemas" />
+    </group>
+</menu>

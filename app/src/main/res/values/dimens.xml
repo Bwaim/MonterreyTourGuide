@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~    Copyright 2018 Fabien Boismoreau
   ~
@@ -15,11 +16,5 @@
   -->
 
 <resources>
-    <string name="app_name">Monterrey Tour Guide</string>
-
-    <!-- Drawer Menu -->
-    <string name="restaurants">Restaurants</string>
-    <string name="cultures">Cultures</string>
-    <string name="entertainments">Entertainments</string>
-    <string name="cinemas">Cinemas</string>
+    <dimen name="drawerElevation">16dp</dimen>
 </resources>

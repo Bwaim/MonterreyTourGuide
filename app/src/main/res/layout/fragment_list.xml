@@ -14,15 +14,13 @@
   ~    limitations under the License.
   -->
 
-<resources>
-    <string name="app_name">Monterrey Tour Guide</string>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/cardViewMargin"
+    android:scrollbars="vertical"
+    tools:context="com.bwaim.monterreytourguide.ui.ListFragment">
 
-    <!-- Drawer Menu -->
-    <string name="restaurants">Restaurants</string>
-    <string name="cultures">Cultures</string>
-    <string name="entertainments">Entertainments</string>
-    <string name="cinemas">Cinemas</string>
-
-    <string name="restaurantTitle1">Los Generales</string>
-    <string name="descriptionImage">descriptive image</string>
-</resources>
+</android.support.v7.widget.RecyclerView>

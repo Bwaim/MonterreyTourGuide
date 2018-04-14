@@ -17,4 +17,10 @@
 
 <resources>
     <dimen name="drawerElevation">16dp</dimen>
+    <dimen name="imageViewHeight">220dp</dimen>
+    <dimen name="cardViewMargin">8dp</dimen>
+    <dimen name="cardViewRadius">4dp</dimen>
+    <dimen name="titlePaddingTop">24dp</dimen>
+    <dimen name="titlePaddingDefault">16dp</dimen>
+    <dimen name="titleTextSize">24sp</dimen>
 </resources>

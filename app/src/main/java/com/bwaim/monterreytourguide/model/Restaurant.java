@@ -23,8 +23,8 @@ package com.bwaim.monterreytourguide.model;
 
 public class Restaurant extends GenericObject {
 
-    public Restaurant(int imageResId, int nameResId) {
-        super(imageResId, nameResId);
+    public Restaurant(int imageResId, int nameResId, int summaryResId) {
+        super(imageResId, nameResId, summaryResId);
     }
 
 

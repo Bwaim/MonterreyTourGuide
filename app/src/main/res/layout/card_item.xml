@@ -35,6 +35,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/card_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titleHeight"
+                android:padding="@dimen/cardViewPaddingDefault"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/titleTextSize"
+                tools:text="@string/restaurantTitle1" />
+
             <ImageView
                 android:id="@+id/photo_image_view"
                 android:layout_width="match_parent"
@@ -44,16 +53,18 @@
                 tools:src="@drawable/monterrey_mexican_restaurant" />
 
             <TextView
-                android:id="@+id/card_view_title"
+                android:id="@+id/card_view_summary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/titlePaddingDefault"
-                android:paddingEnd="@dimen/titlePaddingDefault"
-                android:paddingStart="@dimen/titlePaddingDefault"
-                android:paddingTop="@dimen/titlePaddingTop"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/cardViewPaddingTopBottom"
+                android:paddingEnd="@dimen/cardViewPaddingDefault"
                 android:textColor="@color/colorAccent"
-                android:textSize="@dimen/titleTextSize"
-                tools:text="@string/restaurantTitle1" />
+                android:paddingStart="@dimen/cardViewPaddingDefault"
+                android:paddingTop="@dimen/cardViewPaddingTopBottom"
+                android:textSize="@dimen/summaryTextSize"
+                tools:text="@string/restaurantSummary1" />
 
         </LinearLayout>
 

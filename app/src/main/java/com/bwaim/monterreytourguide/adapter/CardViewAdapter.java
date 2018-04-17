@@ -98,6 +98,7 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
         GenericObject object = mDatas.get(position);
         holder.mImage.setImageResource(object.getImageResId());
         holder.mTitle.setText(object.getNameResId());
+        holder.mSummary.setText(object.getSummaryResId());
     }
 
     /**
@@ -118,12 +119,14 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
         //public FrameLayout mFrameLayout;
         ImageView mImage;
         TextView mTitle;
+        TextView mSummary;
 
         ViewHolder(FrameLayout v) {
             super(v);
 
             mImage = v.findViewById(R.id.photo_image_view);
             mTitle = v.findViewById(R.id.card_view_title);
+            mSummary = v.findViewById(R.id.card_view_summary);
             //mFrameLayout = v;
         }
     }

@@ -20,7 +20,9 @@
     <dimen name="imageViewHeight">220dp</dimen>
     <dimen name="cardViewMargin">8dp</dimen>
     <dimen name="cardViewRadius">4dp</dimen>
-    <dimen name="titlePaddingTop">24dp</dimen>
-    <dimen name="titlePaddingDefault">16dp</dimen>
+    <dimen name="cardViewPaddingTopBottom">24dp</dimen>
+    <dimen name="cardViewPaddingDefault">16dp</dimen>
     <dimen name="titleTextSize">24sp</dimen>
+    <dimen name="summaryTextSize">14sp</dimen>
+    <dimen name="titleHeight">72dp</dimen>
 </resources>

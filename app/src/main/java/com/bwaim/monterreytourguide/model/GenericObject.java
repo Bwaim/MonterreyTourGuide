@@ -33,9 +33,15 @@ public class GenericObject {
      */
     private int nameResId;
 
-    GenericObject(int imageResId, int nameResId) {
+    /**
+     * summary resource id
+     */
+    private int summaryResId;
+
+    GenericObject(int imageResId, int nameResId, int summaryResId) {
         this.imageResId = imageResId;
         this.nameResId = nameResId;
+        this.summaryResId = summaryResId;
     }
 
     public int getImageResId() {
@@ -52,5 +58,13 @@ public class GenericObject {
 
     public void setNameResId(int nameResId) {
         this.nameResId = nameResId;
+    }
+
+    public int getSummaryResId() {
+        return summaryResId;
+    }
+
+    public void setSummaryResId(int summaryResId) {
+        this.summaryResId = summaryResId;
     }
 }

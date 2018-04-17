@@ -49,7 +49,8 @@ public class ListFragment extends Fragment {
 
     static {
         Restaurant restaurant1 = new Restaurant(R.drawable.monterrey_mexican_restaurant
-                , R.string.restaurantTitle1);
+                , R.string.restaurantTitle1, R.string.restaurantSummary1);
+        ITEMS_RESTAURANTS.add(restaurant1);
         ITEMS_RESTAURANTS.add(restaurant1);
         ITEMS_RESTAURANTS.add(restaurant1);
     }

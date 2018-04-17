@@ -16,9 +16,11 @@
 
 package com.bwaim.monterreytourguide.adapter;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -27,6 +29,7 @@ import android.widget.TextView;
 
 import com.bwaim.monterreytourguide.R;
 import com.bwaim.monterreytourguide.model.GenericObject;
+import com.bwaim.monterreytourguide.ui.DetailsActivity;
 
 import java.util.List;
 
@@ -37,10 +40,22 @@ import java.util.List;
 
 public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHolder> {
 
+    public static final String ITEM_DATA = "ITEM_DATA";
+    public static final String ITEM_TITLE = "ITEM_TITLE";
+
+    /**
+     * The list of objects
+     */
     private List<GenericObject> mDatas;
 
-    public CardViewAdapter(List<GenericObject> mDatas) {
+    /**
+     * The type of objects
+     */
+    private String mItemCategory;
+
+    public CardViewAdapter(List<GenericObject> mDatas, String category) {
         this.mDatas = mDatas;
+        this.mItemCategory = category;
     }
 
     /**
@@ -69,6 +84,19 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
 
         FrameLayout frameLayout = (FrameLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_item, parent, false);
+
+        frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecyclerView recyclerView = (RecyclerView) v.getParent();
+                int itemPosition = recyclerView.getChildLayoutPosition(v);
+
+                Intent detailsActivity = new Intent(v.getContext(), DetailsActivity.class);
+                detailsActivity.putExtra(ITEM_DATA, mDatas.get(itemPosition));
+                detailsActivity.putExtra(ITEM_TITLE, mItemCategory);
+                v.getContext().startActivity(detailsActivity);
+            }
+        });
 
         return new ViewHolder(frameLayout);
     }

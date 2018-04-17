@@ -94,7 +94,7 @@ public class ListFragment extends Fragment {
 
         mRecylerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        mCardViewAdapter = new CardViewAdapter(ITEMS_RESTAURANTS);
+        mCardViewAdapter = new CardViewAdapter(ITEMS_RESTAURANTS, getString(R.string.restaurants));
         mRecylerView.setAdapter(mCardViewAdapter);
 
         return view;

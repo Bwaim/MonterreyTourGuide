@@ -16,12 +16,14 @@
 
 package com.bwaim.monterreytourguide.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Fabien Boismoreau on 14/04/2018.
  * <p>
  */
 
-public class GenericObject {
+public class GenericObject implements Serializable {
 
     /**
      * image resource id

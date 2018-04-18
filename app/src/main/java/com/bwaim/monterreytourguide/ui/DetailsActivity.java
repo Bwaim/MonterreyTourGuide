@@ -18,6 +18,7 @@ package com.bwaim.monterreytourguide.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -56,13 +57,28 @@ public class DetailsActivity extends AppCompatActivity {
         collapsingToolbarLayout.setTitle(mCategory);
         collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Add the back button
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
+        AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout);
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                // Set the home button transparent depending the offset
+                int alpha = 255 -
+                        (255 * (appBarLayout.getTotalScrollRange() - Math.abs(verticalOffset))
+                                / appBarLayout.getTotalScrollRange());
+                if (toolbar.getNavigationIcon() != null) {
+                    toolbar.getNavigationIcon().setAlpha(alpha);
+                }
+            }
+        });
 
     }
 }

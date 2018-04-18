@@ -48,7 +48,7 @@ public class ListFragment extends Fragment {
     public static final List<GenericObject> ITEMS_RESTAURANTS = new ArrayList<>();
 
     static {
-        Restaurant restaurant1 = new Restaurant(R.drawable.monterrey_mexican_restaurant
+        Restaurant restaurant1 = new Restaurant(R.drawable.losgenerales
                 , R.string.restaurantTitle1, R.string.restaurantSummary1);
         ITEMS_RESTAURANTS.add(restaurant1);
         ITEMS_RESTAURANTS.add(restaurant1);

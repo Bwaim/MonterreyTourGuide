@@ -24,6 +24,7 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <item name="actionBarStyle">@style/MyActionBar</item>
+        <!--<item name="actionBarWidgetTheme">@style/MyActionBar</item>-->
     </style>
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
@@ -38,17 +39,14 @@
         <item name="android:textColorPrimary">@color/colorAccent</item>
     </style>
 
-    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">21sp</item>
-        <item name="android:textStyle">italic</item>
-    </style>
-
     <!-- NoActionBar application theme. -->
     <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--<item name="colorControlNormal">@color/colorAccent</item>-->
     </style>
 
 </resources>

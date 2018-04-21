@@ -31,6 +31,7 @@ import com.bwaim.monterreytourguide.R;
 import com.bwaim.monterreytourguide.model.GenericObject;
 import com.bwaim.monterreytourguide.ui.DetailsActivity;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -92,7 +93,7 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
 
                 Intent detailsActivity = new Intent(v.getContext(), DetailsActivity.class);
-                detailsActivity.putExtra(ITEM_DATA, mDatas.get(itemPosition));
+                detailsActivity.putExtra(ITEM_DATA, (Serializable) mDatas.get(itemPosition));
                 detailsActivity.putExtra(ITEM_TITLE, mItemCategory);
                 v.getContext().startActivity(detailsActivity);
             }

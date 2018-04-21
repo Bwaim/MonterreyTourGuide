@@ -23,8 +23,16 @@
     <string name="entertainments">Entertainments</string>
     <string name="cinemas">Cinemas</string>
 
-    <string name="restaurantTitle1">Los Generales</string>
     <string name="descriptionImage">descriptive image</string>
-    <string name="restaurantSummary1">Los Generales is the ideal restaurant to share a delicious meal in the company of your loved ones. We have the widest and most delicious variety of dishes for all tastes. Enjoy our exquisite buffets in any of our 6 branches, 7 days a week, 365 days a year.</string>
     <string name="objectDetailImage">Point of interest view</string>
+
+    <!-- Cultures places -->
+    <string name="cultureTitle1">Metropolitan Cathedral</string>
+    <string name="cultureSummary1">This temple located in the old neighborhood of Monterrey is the seat of the Archdiocese of the city. Account with a tower of three bodies and a sober central ship, with hornacinas chapels in the sides and a cupola of octagonal form. The construction dates from the 18th century, although it mixes neoclassical lines with a baroque façade. The chapel of the tabernacle has a beautiful frontal of embossed silver. In the sacristy there is a series of beautiful paintings from the viceregal period and in the presbytery there are colorful murals by Ángel Zárraga Arguelles, painted during the 1940s.</string>
+
+    <string name="restaurantTitle1">Los Generales</string>
+    <string name="restaurantSummary1">Los Generales is the ideal restaurant to share a delicious meal in the company of your loved ones. We have the widest and most delicious variety of dishes for all tastes. Enjoy our exquisite buffets in any of our 6 branches, 7 days a week, 365 days a year.</string>
+    <string name="monterreyCity">Monterrey city</string>
+
+
 </resources>

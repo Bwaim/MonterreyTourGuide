@@ -29,10 +29,8 @@ import android.view.ViewGroup;
 import com.bwaim.monterreytourguide.R;
 import com.bwaim.monterreytourguide.adapter.CardViewAdapter;
 import com.bwaim.monterreytourguide.model.GenericObject;
-import com.bwaim.monterreytourguide.model.Restaurant;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -45,19 +43,15 @@ import java.util.List;
  */
 public class ListFragment extends Fragment {
 
-    public static final List<GenericObject> ITEMS_RESTAURANTS = new ArrayList<>();
-
-    static {
-        Restaurant restaurant1 = new Restaurant(R.drawable.losgenerales
-                , R.string.restaurantTitle1, R.string.restaurantSummary1);
-        ITEMS_RESTAURANTS.add(restaurant1);
-        ITEMS_RESTAURANTS.add(restaurant1);
-        ITEMS_RESTAURANTS.add(restaurant1);
-    }
+    public static final String DATA_KEY = "DATA_KEY";
+    public static final String TYPE_KEY = "TYPE_KEY";
 
     private RecyclerView mRecylerView;
     private CardViewAdapter mCardViewAdapter;
     private OnListFragmentInteractionListener mListener;
+
+    private ArrayList<GenericObject> mDatas;
+    private String mType;
 
     public ListFragment() {
         // Required empty public constructor
@@ -67,12 +61,15 @@ public class ListFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param imgResId the image at the top of the fragment.
+     * @param data the data of the list.
      * @return A new instance of fragment ListFragment.
      */
-    public static ListFragment newInstance(int imgResId) {
+    public static ListFragment newInstance(ArrayList<GenericObject> data, String type) {
         ListFragment fragment = new ListFragment();
         Bundle args = new Bundle();
+        args.putParcelableArrayList(DATA_KEY, data);
+        args.putString(TYPE_KEY, type);
+        fragment.setArguments(args);
         return fragment;
     }
 
@@ -94,7 +91,12 @@ public class ListFragment extends Fragment {
 
         mRecylerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-        mCardViewAdapter = new CardViewAdapter(ITEMS_RESTAURANTS, getString(R.string.restaurants));
+        if (getArguments() != null) {
+            mDatas = getArguments().getParcelableArrayList(DATA_KEY);
+            mType = getArguments().getString(TYPE_KEY);
+        }
+
+        mCardViewAdapter = new CardViewAdapter(mDatas, mType);
         mRecylerView.setAdapter(mCardViewAdapter);
 
         return view;

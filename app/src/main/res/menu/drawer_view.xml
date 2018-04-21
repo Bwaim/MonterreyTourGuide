@@ -18,13 +18,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/restaurants"
-            android:icon="@drawable/ic_restaurant"
-            android:title="@string/restaurants" />
-        <item
             android:id="@+id/cultures"
             android:icon="@drawable/ic_landscape"
             android:title="@string/cultures" />
+        <item
+            android:id="@+id/restaurants"
+            android:icon="@drawable/ic_restaurant"
+            android:title="@string/restaurants" />
         <item
             android:id="@+id/entertainments"
             android:icon="@drawable/ic_casino"

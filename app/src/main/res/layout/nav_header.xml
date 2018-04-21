@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~    Copyright 2018 Fabien Boismoreau
   ~
   ~    Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +14,17 @@
   ~    limitations under the License.
   -->
 
-<resources>
-    <dimen name="imageViewHeight">220dp</dimen>
-    <dimen name="cardViewMargin">8dp</dimen>
-    <dimen name="cardViewRadius">4dp</dimen>
-    <dimen name="cardViewPaddingTopBottom">24dp</dimen>
-    <dimen name="cardViewPaddingDefault">16dp</dimen>
-    <dimen name="titleTextSize">24sp</dimen>
-    <dimen name="summaryTextSize">14sp</dimen>
-    <dimen name="titleHeight">72dp</dimen>
-    <dimen name="navHeaderHeight">192dp</dimen>
-</resources>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/monterreyCity"
+        android:scaleType="centerCrop"
+        android:src="@drawable/monterrey" />
+
+</LinearLayout>

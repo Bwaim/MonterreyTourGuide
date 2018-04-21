@@ -41,20 +41,55 @@ public class MainActivity extends AppCompatActivity
         ArrayList<GenericObject> ITEMS_CULTURES = new ArrayList<>();
         GenericObject culture1 = new GenericObject(R.drawable.catedral_metropolitana
                 , R.string.cultureTitle1, R.string.cultureSummary1);
+        GenericObject culture2 = new GenericObject(R.drawable.santa_lucia
+                , R.string.cultureTitle2, R.string.cultureSummary2);
+        GenericObject culture3 = new GenericObject(R.drawable.macroplaza
+                , R.string.cultureTitle3, R.string.cultureSummary3);
+        GenericObject culture4 = new GenericObject(R.drawable.museo_del_palacio_gobierno
+                , R.string.cultureTitle4, R.string.cultureSummary4);
+        GenericObject culture5 = new GenericObject(R.drawable.museo_historia_mexicana
+                , R.string.cultureTitle5, R.string.cultureSummary5);
+        GenericObject culture6 = new GenericObject(R.drawable.parque_fundidora
+                , R.string.cultureTitle6, R.string.cultureSummary6);
 
         ITEMS_CULTURES.add(culture1);
+        ITEMS_CULTURES.add(culture2);
+        ITEMS_CULTURES.add(culture3);
+        ITEMS_CULTURES.add(culture4);
+        ITEMS_CULTURES.add(culture5);
+        ITEMS_CULTURES.add(culture6);
 
         ArrayList<GenericObject> ITEMS_RESTAURANTS = new ArrayList<>();
         GenericObject restaurant1 = new GenericObject(R.drawable.losgenerales
                 , R.string.restaurantTitle1, R.string.restaurantSummary1);
+        GenericObject restaurant2 = new GenericObject(R.drawable.los_cabritos
+                , R.string.restaurantTitle2, R.string.restaurantSummary2);
+        GenericObject restaurant3 = new GenericObject(R.drawable.pollo_loco
+                , R.string.restaurantTitle3, R.string.restaurantSummary3);
+
         ITEMS_RESTAURANTS.add(restaurant1);
-        ITEMS_RESTAURANTS.add(restaurant1);
-        ITEMS_RESTAURANTS.add(restaurant1);
+        ITEMS_RESTAURANTS.add(restaurant2);
+        ITEMS_RESTAURANTS.add(restaurant3);
+
+        ArrayList<GenericObject> ITEMS_ENTERTAINMENTS = new ArrayList<>();
+        GenericObject entertainment1 = new GenericObject(R.drawable.plaza_sesamo
+                , R.string.entertainmentTitle1, R.string.entertainmentSummary1);
+
+        ITEMS_ENTERTAINMENTS.add(entertainment1);
+
+        ArrayList<GenericObject> ITEMS_MOVIES = new ArrayList<>();
+        GenericObject cinema1 = new GenericObject(R.drawable.cinepolis
+                , R.string.cinemaTitle1, R.string.cinemaSummary1);
+        GenericObject cinema2 = new GenericObject(R.drawable.cinemex
+                , R.string.cinemaTitle2, R.string.cinemaSummary2);
+
+        ITEMS_MOVIES.add(cinema1);
+        ITEMS_MOVIES.add(cinema2);
 
         DATAS.put(R.id.cultures, ITEMS_CULTURES);
         DATAS.put(R.id.restaurants, ITEMS_RESTAURANTS);
-        DATAS.put(R.id.entertainments, new ArrayList<GenericObject>());
-        DATAS.put(R.id.cinemas, new ArrayList<GenericObject>());
+        DATAS.put(R.id.entertainments, ITEMS_ENTERTAINMENTS);
+        DATAS.put(R.id.cinemas, ITEMS_MOVIES);
     }
 
     private DrawerLayout mDrawerLayout;

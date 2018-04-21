@@ -22,7 +22,7 @@
     tools:context="com.bwaim.monterreytourguide.ui.ListFragment">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/card_view_CV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/cardViewMargin"
@@ -36,7 +36,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/card_view_title"
+                android:id="@+id/card_view_title_TV"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/titleHeight"
                 android:padding="@dimen/cardViewPaddingDefault"
@@ -45,15 +45,15 @@
                 tools:text="@string/restaurantTitle1" />
 
             <ImageView
-                android:id="@+id/photo_image_view"
+                android:id="@+id/photo_image_view_IV"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/imageViewHeight"
                 android:contentDescription="@string/descriptionImage"
                 android:scaleType="centerCrop"
-                tools:src="@drawable/monterrey_mexican_restaurant" />
+                tools:src="@drawable/losgenerales" />
 
             <TextView
-                android:id="@+id/card_view_summary"
+                android:id="@+id/card_view_summary_TV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"

@@ -76,7 +76,6 @@ public class ListFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -85,7 +84,7 @@ public class ListFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
-        mRecylerView = view.findViewById(R.id.recycler_view);
+        mRecylerView = view.findViewById(R.id.recycler_view_RV);
 
         mRecylerView.setHasFixedSize(true);
 
@@ -101,13 +100,6 @@ public class ListFragment extends Fragment {
 
         return view;
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
-//    public void onButtonPressed(Uri uri) {
-//        if (mListener != null) {
-//            mListener.onFragmentInteraction(uri);
-//        }
-//    }
 
     @Override
     public void onAttach(Context context) {
@@ -137,7 +129,6 @@ public class ListFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
-//        void onFragmentInteraction(Uri uri);
+        // No information to pass from the fragment to the activity
     }
 }

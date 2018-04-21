@@ -44,7 +44,8 @@ public class DetailsActivity extends AppCompatActivity {
         mObject = (GenericObject) intent.getSerializableExtra(CardViewAdapter.ITEM_DATA);
         mCategory = intent.getStringExtra(CardViewAdapter.ITEM_TITLE);
 
-        ImageView image = findViewById(R.id.collapsing_image);
+        // Fill the View with the information
+        ImageView image = findViewById(R.id.collapsing_image_IV);
         image.setImageResource(mObject.getImageResId());
 
         TextView titleTV = findViewById(R.id.title_TV);
@@ -53,11 +54,12 @@ public class DetailsActivity extends AppCompatActivity {
         TextView summaryTV = findViewById(R.id.summary_TV);
         summaryTV.setText(mObject.getSummaryResId());
 
-        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar_layout);
+        // Set the toolbar
+        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar_layout_CTL);
         collapsingToolbarLayout.setTitle(mCategory);
         collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
-        final Toolbar toolbar = findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar_TB);
         setSupportActionBar(toolbar);
 
         // Add the back button
@@ -65,7 +67,7 @@ public class DetailsActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout);
+        AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout_ABL);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {

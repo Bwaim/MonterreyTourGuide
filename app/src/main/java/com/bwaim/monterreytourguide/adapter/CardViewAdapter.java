@@ -145,7 +145,6 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
     // you provide access to all the views for a data item in a view holder
     static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        //public FrameLayout mFrameLayout;
         ImageView mImage;
         TextView mTitle;
         TextView mSummary;
@@ -153,10 +152,9 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHo
         ViewHolder(FrameLayout v) {
             super(v);
 
-            mImage = v.findViewById(R.id.photo_image_view);
-            mTitle = v.findViewById(R.id.card_view_title);
-            mSummary = v.findViewById(R.id.card_view_summary);
-            //mFrameLayout = v;
+            mImage = v.findViewById(R.id.photo_image_view_IV);
+            mTitle = v.findViewById(R.id.card_view_title_TV);
+            mSummary = v.findViewById(R.id.card_view_summary_TV);
         }
     }
 }

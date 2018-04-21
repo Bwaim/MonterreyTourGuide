@@ -35,9 +35,16 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements ListFragment.OnListFragmentInteractionListener {
 
+    /**
+     * The content data
+     */
     public static final SparseArray<ArrayList<GenericObject>> DATAS = new SparseArray<>();
 
+    /*
+     * Initialisation of the content
+     */
     static {
+        // Create the culture location
         ArrayList<GenericObject> ITEMS_CULTURES = new ArrayList<>();
         GenericObject culture1 = new GenericObject(R.drawable.catedral_metropolitana
                 , R.string.cultureTitle1, R.string.cultureSummary1);
@@ -59,6 +66,7 @@ public class MainActivity extends AppCompatActivity
         ITEMS_CULTURES.add(culture5);
         ITEMS_CULTURES.add(culture6);
 
+        // Create the restaurants location
         ArrayList<GenericObject> ITEMS_RESTAURANTS = new ArrayList<>();
         GenericObject restaurant1 = new GenericObject(R.drawable.losgenerales
                 , R.string.restaurantTitle1, R.string.restaurantSummary1);
@@ -71,12 +79,14 @@ public class MainActivity extends AppCompatActivity
         ITEMS_RESTAURANTS.add(restaurant2);
         ITEMS_RESTAURANTS.add(restaurant3);
 
+        // Create the entertainment location
         ArrayList<GenericObject> ITEMS_ENTERTAINMENTS = new ArrayList<>();
         GenericObject entertainment1 = new GenericObject(R.drawable.plaza_sesamo
                 , R.string.entertainmentTitle1, R.string.entertainmentSummary1);
 
         ITEMS_ENTERTAINMENTS.add(entertainment1);
 
+        // Create the cinemas location
         ArrayList<GenericObject> ITEMS_MOVIES = new ArrayList<>();
         GenericObject cinema1 = new GenericObject(R.drawable.cinepolis
                 , R.string.cinemaTitle1, R.string.cinemaSummary1);
@@ -86,10 +96,10 @@ public class MainActivity extends AppCompatActivity
         ITEMS_MOVIES.add(cinema1);
         ITEMS_MOVIES.add(cinema2);
 
-        DATAS.put(R.id.cultures, ITEMS_CULTURES);
-        DATAS.put(R.id.restaurants, ITEMS_RESTAURANTS);
-        DATAS.put(R.id.entertainments, ITEMS_ENTERTAINMENTS);
-        DATAS.put(R.id.cinemas, ITEMS_MOVIES);
+        DATAS.put(R.id.cultures_I, ITEMS_CULTURES);
+        DATAS.put(R.id.restaurants_I, ITEMS_RESTAURANTS);
+        DATAS.put(R.id.entertainments_I, ITEMS_ENTERTAINMENTS);
+        DATAS.put(R.id.cinemas_I, ITEMS_MOVIES);
     }
 
     private DrawerLayout mDrawerLayout;
@@ -100,7 +110,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         //Set the actionBar
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_TB);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
@@ -108,17 +118,18 @@ public class MainActivity extends AppCompatActivity
             actionbar.setHomeAsUpIndicator(R.drawable.ic_action_dehaze);
         }
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view_NV);
 
         // Select the first item as displayed
         MenuItem firstMenuItem = navigationView.getMenu().getItem(0);
         firstMenuItem.setChecked(true);
 
+        // Create the first fragment to display
         ListFragment fragment = ListFragment.newInstance(DATAS.get(firstMenuItem.getItemId())
                 , firstMenuItem.getTitle().toString());
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, fragment).commit();
+                .replace(R.id.content_frame_FL, fragment).commit();
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
@@ -137,7 +148,7 @@ public class MainActivity extends AppCompatActivity
                                 DATAS.get(menuItem.getItemId()), menuItem.getTitle().toString());
 
                         getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.content_frame, fragment).commit();
+                                .replace(R.id.content_frame_FL, fragment).commit();
 
                         return true;
                     }

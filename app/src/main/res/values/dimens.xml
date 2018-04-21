@@ -24,5 +24,4 @@
     <dimen name="titleTextSize">24sp</dimen>
     <dimen name="summaryTextSize">14sp</dimen>
     <dimen name="titleHeight">72dp</dimen>
-    <dimen name="navHeaderHeight">192dp</dimen>
 </resources>
